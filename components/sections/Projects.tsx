@@ -5,7 +5,6 @@ import {
   Zap,
   Shield,
   Lock,
-  Code,
   Target,
   BarChart3,
   ArrowRight,

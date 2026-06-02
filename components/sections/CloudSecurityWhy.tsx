@@ -57,7 +57,7 @@ const CloudSecurityWhy = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
-            const colorMap: Record<string, Record<string, string>> = {
+            const colorMap: Record<string, string> = {
               primary: "border-primary-500/30 bg-primary-500/5",
               accent: "border-accent-500/30 bg-accent-500/5",
               purple: "border-purple-500/30 bg-purple-500/5",

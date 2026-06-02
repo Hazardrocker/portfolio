@@ -77,7 +77,7 @@ const Learning = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {learningPaths.map((path, index) => {
             const Icon = path.icon;
-            const colorMap: Record<string, Record<string, string>> = {
+            const colorMap: Record<string, string> = {
               primary: "border-primary-500/30 text-primary-400",
               accent: "border-accent-500/30 text-accent-400",
               purple: "border-purple-500/30 text-purple-400",

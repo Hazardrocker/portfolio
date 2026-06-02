@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Award, Target, CheckCircle } from "lucide-react";
+import { Briefcase, Award, CheckCircle } from "lucide-react";
 
 const Internship = () => {
   const internships = [

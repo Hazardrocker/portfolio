@@ -140,7 +140,7 @@ const Certifications = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {futureCertifications.map((cert, index) => {
-              const colorMap: Record<string, Record<string, string>> = {
+              const colorMap: Record<string, string> = {
                 blue: "border-blue-500/30 bg-blue-500/5",
                 purple: "border-purple-500/30 bg-purple-500/5",
                 red: "border-red-500/30 bg-red-500/5",

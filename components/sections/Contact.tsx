@@ -104,7 +104,7 @@ const Contact = () => {
 
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
-              const colorMap: Record<string, Record<string, string>> = {
+              const colorMap: Record<string, string> = {
                 primary: "border-primary-500/30 hover:border-primary-500/60",
                 accent: "border-accent-500/30 hover:border-accent-500/60",
                 blue: "border-blue-500/30 hover:border-blue-500/60",
