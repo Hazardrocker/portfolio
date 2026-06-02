@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a 0%, #111827 50%, #0f172a 100%);
+  background-attachment: fixed;
+  color: #e5e7eb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animated gradient background */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    -45deg,
+    rgba(14, 165, 233, 0.03),
+    rgba(34, 197, 94, 0.02),
+    rgba(139, 92, 246, 0.03)
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.animated-bg::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  top: -100px;
+  right: -100px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.animated-bg::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(34, 197, 94, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: -200px;
+  left: -200px;
+  animation: float 25s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-50px) translateX(30px);
+  }
+  50% {
+    transform: translateY(-100px) translateX(-20px);
+  }
+  75% {
+    transform: translateY(-50px) translateX(50px);
+  }
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(31, 41, 55, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(229, 231, 235, 0.1);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(229, 231, 235, 0.05);
+}
+
+.glass-light {
+  background: rgba(51, 65, 85, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 231, 235, 0.15);
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 30px rgba(14, 165, 233, 0.3),
+    0 0 60px rgba(14, 165, 233, 0.15);
+}
+
+.glow-accent {
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.3),
+    0 0 60px rgba(34, 197, 94, 0.15);
+}
+
+.glow-purple {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.3),
+    0 0 60px rgba(139, 92, 246, 0.15);
+}
+
+/* Text gradients */
+.gradient-text {
+  background: linear-gradient(135deg, #0ea5e9 0%, #22c55e 50%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-primary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-accent {
+  background: linear-gradient(135deg, #22c55e 0%, #4ade80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Border gradient */
+.border-gradient {
+  position: relative;
+  border: 1px solid transparent;
+  background: linear-gradient(rgba(31, 41, 55, 0.4), rgba(31, 41, 55, 0.4))
+      padding-box,
+    linear-gradient(135deg, #0ea5e9, #22c55e, #8b5cf6) border-box;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #0ea5e9, #22c55e);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #38bdf8, #4ade80);
+}
+
+/* Smooth transitions */
+a,
+button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Code styling */
+code {
+  font-family: "Fira Code", "Monaco", "Courier New", monospace;
+  font-size: 0.9em;
+  background: rgba(51, 65, 85, 0.5);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  color: #4ade80;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(14, 165, 233, 0.3);
+  color: #e5e7eb;
+}
+
+::-moz-selection {
+  background: rgba(14, 165, 233, 0.3);
+  color: #e5e7eb;
+}
